@@ -1,0 +1,143 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+}
+
+main {
+  width: 80%;
+  margin: 80px auto;
+  
+}
+@media (min-width: 992px) {
+  main {
+    margin: 20px auto;
+  }
+  
+}
+header {
+  text-align: center;
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  header{
+    width: 500px;
+    margin-bottom: 180px;
+  }
+}
+@media (min-width: 778px) and (max-width:991px) {
+  header {
+    width: 500px;
+  }
+}
+header h2 {
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  header h2{
+    font-size: 2rem;
+  }
+}
+@media (min-width: 778px) and (max-width:991px) {
+  header h2 {
+    font-size: 2rem;
+  }
+}
+
+header h2 span {
+  font-weight: 200;
+}
+
+
+
+header p {
+  color: var(--Grayish-Blue);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+
+.boxs {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 992px) {
+  .boxs  {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+@media (min-width: 778px) and (max-width:991px) {
+  .boxs  {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+.boxs .box {
+  padding: 30px;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 4px 12px hsl(234deg 12% 34% / 30%) ;
+}
+
+
+.boxs .box:nth-child(1) {
+  border-top: 5px solid var(--Cyan);
+}
+.boxs .box:nth-child(2) {
+  border-top: 5px solid var(--Red);
+}
+@media (min-width: 992px) {
+  .boxs .box:nth-child(2) {
+    position: relative;  
+    top: -40%;
+  }
+}
+.boxs .box:nth-child(3) {
+  border-top: 5px solid var(--Orange);
+}
+.boxs .box:nth-child(4) {
+  border-top: 5px solid var(--Blue);
+}
+@media (min-width: 992px) {
+  .boxs .box:nth-child(4) {
+    position: relative;
+    left: calc( 100% + 2rem);
+    top: -40%;
+    
+  }
+}
+.box h3 {
+  color: var(--Very-Dark-Blue);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.box p {
+  color: var(--Grayish-Blue);
+}
+
+.boxs .box  img {
+  margin-top: 40px;
+  position: relative;
+  left: 80%;
+  
+}
